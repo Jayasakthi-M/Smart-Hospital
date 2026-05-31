@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating-img {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Button Glow Effect */
+.btn-glow {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.7) !important;
+}
+
+.btn-glow-white {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-glow-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Utilities */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.w-250px {
+  width: 250px !important;
+}
+
+.w-80px {
+  width: 80px !important;
+}
+
+.h-75px {
+  height: 75px !important;
+}
+
+.min-w-150px {
+  min-width: 150px;
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-bg-light:hover {
+  background-color: #f8f9fa !important;
+}
+
+.hover-shadow {
+  transition: box-shadow 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.scale-105 {
+  transform: scale(1.05);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+/* GLOBAL SCROLL FIX */
+html,
+body {
+  height: auto !important;
+  min-height: 100vh;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
